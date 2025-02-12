@@ -4,22 +4,22 @@ import { sql } from "@vercel/postgres";
 
 export default async function list() {
  
-    const { rows }= await sql`SELECT * FROM students`
+    const { rows }= await sql`SELECT * FROM computer`
 
     return (
         <div className="rounded-md border">
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[50%]">Nome</TableHead>
-                        <TableHead>E-mail</TableHead>
+                        <TableHead className="w-[50%]">Brand</TableHead>
+                        <TableHead>Description</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {rows.map((student) => (
-                        <TableRow key={student.id}>
-                            <TableCell className="font-medium">{student.name}</TableCell>
-                            <TableCell>{student.email}</TableCell>
+                    {rows.map((computer) => (
+                        <TableRow key={computer.id}>
+                            <TableCell className="font-medium">{computer.brand}</TableCell>
+                            <TableCell>{computer.description}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

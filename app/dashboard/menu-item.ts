@@ -19,18 +19,18 @@ const data = {
     ],
     navMain: [
       {
-        title: "Estudante",
+        title: "Computer",
         url: "#",
         icon: Bot,
         isActive: true,
         items: [
           {
             title: "Cadastrar",
-            url: "/dashboard/student",
+            url: "/dashboard/computer",
           },
           {
             title: "Listar",
-            url: "/dashboard/student/list",
+            url: "/dashboard/computer/list",
           },
           {
             title: "Settings",
